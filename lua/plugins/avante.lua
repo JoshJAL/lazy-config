@@ -7,9 +7,14 @@ return {
     -- for example
     provider = "claude",
     providers = {
-      calude = {
+      claude = {
         endpoint = "https://api.anthropic.com",
-        model = "claude-3-7-sonnet-latest",
+        model = "claude-opus-4-6",
+        timeout = 30000,
+        extra_request_body = {
+          temperature = 0.75,
+          max_tokens = 20480,
+        },
       },
     },
   },
